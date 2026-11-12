@@ -1716,7 +1716,7 @@ class ModernGameAssistant:
                                 cls_id = int(b.cls[0].item()) if hasattr(b, 'cls') else -1
                                 conf = float(b.conf[0].item()) if hasattr(b, 'conf') else 0.0
                                 label = str(self.yolo.names.get(cls_id, cls_id))
-                                color = (0, 255, 0) if 'CT' in label else (0, 0, 255)
+                                color = (0, 255, 0) if 'Enemy' in label else (0, 0, 255)
                                 cv2.rectangle(background, (x_offset + int(x1), y_offset + int(y1)), (x_offset + int(x2), y_offset + int(y2)), color, 2)
                                 cv2.putText(background, f"{label} {conf:.2f}", (x_offset + int(x1), y_offset + int(y1) - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1, cv2.LINE_AA)
                             except Exception:
