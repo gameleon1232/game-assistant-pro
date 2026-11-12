@@ -79,7 +79,7 @@ class ModernGameAssistant:
             'aim_speed': 100.0,
             'aim_accuracy_radius': 10,
             'aim_key': 'alt',
-            'aim_target': 'CT_Head',
+            'aim_target': 'Enemy_Head',
             'output_mode': 'virtual',  # virtual | hardware
             'hardware_port': '',
             'hardware_baud': 115200,
@@ -117,7 +117,7 @@ class ModernGameAssistant:
     
     def setup_main_window(self):
         """Настройка главного окна"""
-        self.root.title("🎯 Game Assistant Pro - CS2 Helper")
+        self.root.title("🎯 Game Assistant Pro")
         self.root.geometry("1400x900")
         self.root.minsize(1200, 800)
         
@@ -927,9 +927,9 @@ class ModernGameAssistant:
 
         # Цель (выпадающий список)
         ttk.Label(grid, text="🎯 Цель:", font=('Segoe UI', 11, 'bold')).grid(row=3, column=0, padx=10, pady=10, sticky='w')
-        self.aim_target_var = tk.StringVar(value=self.settings.get('aim_target', 'CT_Head'))
+        self.aim_target_var = tk.StringVar(value=self.settings.get('aim_target', 'Enemy_Head'))
         ttk.Combobox(grid, textvariable=self.aim_target_var, state='readonly', values=[
-            'CT_Head', 'CT_Body', 'T_Head', 'T_Body'
+            'Enemy_Head', 'Enemy_Body', 'Friendly_Head', 'Friendly_Body'
         ], width=20).grid(row=3, column=1, padx=10, pady=10, sticky='w')
 
         # Режим вывода и подключение к аппаратной мыши
@@ -1807,7 +1807,7 @@ class ModernGameAssistant:
             background[y_offset:y_offset+new_h, x_offset:x_offset+new_w] = img_resized
 
             # Ищем цель выбранного класса
-            target_label = self.settings.get('aim_target', 'CT_Head')
+            target_label = self.settings.get('aim_target', 'Enemy_Head')
             target_center = None
             if hasattr(self, 'yolo') and self.yolo is not None:
                 try:
@@ -1982,10 +1982,10 @@ class ModernGameAssistant:
         buttons_frame.pack(side='bottom', fill='x', pady=(10, 0))
 
         classes = [
-            ("CT Голова", "CT_Head"),
-            ("CT Тело", "CT_Body"),
-            ("T Голова", "T_Head"),
-            ("T Тело", "T_Body")
+            ("Противник: голова", "Enemy_Head"),
+            ("Противник: тело", "Enemy_Body"),
+            ("Союзник: голова", "Friendly_Head"),
+            ("Союзник: тело", "Friendly_Body")
         ]
 
         # Папки (по умолчанию текущая директория проекта)
@@ -2824,7 +2824,7 @@ class ModernGameAssistant:
                 return
 
             # Классы
-            names = ['CT_Head', 'CT_Body', 'T_Head', 'T_Body']
+            names = ['Enemy_Head', 'Enemy_Body', 'Friendly_Head', 'Friendly_Body']
             name_to_id = {n: i for i, n in enumerate(names)}
 
             # Формируем датасет (простое разделение 90/10)
@@ -3234,7 +3234,7 @@ class ModernGameAssistant:
             # Параметры
             speed_px_s = float(self.settings.get('aim_speed', 100.0))
             accuracy_radius = int(self.settings.get('aim_accuracy_radius', 10))
-            target_label = self.settings.get('aim_target', 'CT_Head')
+            target_label = self.settings.get('aim_target', 'Enemy_Head')
 
             # Центр экрана (куда хотим свести прицел)
             screen_w = int(self.settings.get('screen_width', 1920))

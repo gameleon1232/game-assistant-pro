@@ -9,7 +9,7 @@
     "aim_speed": 100.0,
     "aim_accuracy_radius": 10,
     "aim_key": "alt",
-    "aim_target": "CT_Head",
+    "aim_target": "Enemy_Head",
     "output_mode": "virtual",
     "hardware_port": "",
     "hardware_baud": 115200,

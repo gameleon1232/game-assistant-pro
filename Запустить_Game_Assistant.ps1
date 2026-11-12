@@ -1,8 +1,8 @@
-# Game Assistant Pro - CS2 Helper
+# Game Assistant Pro
 # PowerShell скрипт для запуска
 
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "    Game Assistant Pro - CS2 Helper" -ForegroundColor Cyan
+Write-Host "    Game Assistant Pro" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 

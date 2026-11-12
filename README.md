@@ -1,9 +1,9 @@
-# 🎯 Game Assistant Pro - CS2 Helper
+# 🎯 Game Assistant Pro
 
-> English summary: a computer-vision game helper for CS2-style shooters — color trigger-bot, YOLO-based enemy detection and smooth aim assist. Python/Tkinter GUI, screen capture only (no game memory access), input via Interception driver, virtual HID mouse, or serial hardware.
+> English summary: a computer-vision game helper for FPS games — color trigger-bot, YOLO-based enemy detection and smooth aim assist. Python/Tkinter GUI, screen capture only (no game memory access), input via Interception driver, virtual HID mouse, or serial hardware.
 
 ## 📋 Описание
-Программа-помощник для игр в стиле CS2 с функциями триггер-бота, машинного зрения и авто-наводки.
+Программа-помощник для шутеров от первого лица с функциями триггер-бота, машинного зрения и авто-наводки.
 
 > ⚠️ **Дисклеймер:** проект опубликован в образовательных целях (компьютерное зрение, YOLO, автоматизация ввода). Использование в онлайн-играх нарушает их правила и может привести к блокировке аккаунта. Автор не несёт ответственности за misuse.
 
@@ -32,7 +32,7 @@ py run.py
 - **Ручное управление предпросмотром**
 
 ### 👁️ Машинное зрение
-- Обучение на изображениях CT/T
+- Обучение на изображениях команд
 - Обнаружение противников
 - Отображение рамок
 
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ## 📦 Что не входит в репозиторий
 Из-за размера в git не включены (добавлены в `.gitignore`):
 - Обученные YOLO-модели (`models/`, `*.pt`) — обучите свою через Roboflow/Ultralytics
-- Датасеты и скриншоты (`datasets/`, `cs2.v16i.yolov8/`, `Data_Photo/`, `Input_Photo/`, `Labels/`, `yolo_dataset/`)
+- Датасеты и скриншоты (`datasets/`, `Data_Photo/`, `Input_Photo/`, `Labels/`, `yolo_dataset/`)
 - Артефакты обучения (`runs/`)
 - Драйвер [Interception](https://github.com/oblitum/Interception/releases) — скачайте отдельно
 

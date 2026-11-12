@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Game Assistant Pro - CS2 Helper
+Game Assistant Pro
 Простой запуск программы
 """
 
@@ -9,7 +9,7 @@ import sys
 import os
 
 def main():
-    print("🎯 Game Assistant Pro - CS2 Helper")
+    print("🎯 Game Assistant Pro")
     print("=" * 40)
     print()
     

@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
-title Game Assistant Pro - CS2 Helper
+title Game Assistant Pro
 echo.
 echo ========================================
-echo    Game Assistant Pro - CS2 Helper
+echo    Game Assistant Pro
 echo ========================================
 echo.
 echo Запуск программы...
