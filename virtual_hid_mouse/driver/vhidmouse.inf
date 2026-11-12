@@ -1,0 +1,32 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=Mouse
+ClassGuid={4D36E96F-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+DriverVer=01/01/2025,1.0.0.0
+CatalogFile=vhidmouse.cat
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%DeviceName%=Install, ROOT\VHIDMOUSE
+
+[Install]
+CopyFiles=DriverCopy
+AddReg=DeviceReg
+
+[DestinationDirs]
+DriverCopy = 12
+
+[DriverCopy]
+vhidmouse.sys
+
+[DeviceReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,vhidmouse.sys
+
+[Strings]
+ManufacturerName="Virtual HID Mouse"
+DeviceName="Virtual HID Mouse Device"
+

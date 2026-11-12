@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.zcode/
+
+# Trained models & training artifacts (too large for git)
+models/
+runs/
+*.pt
+*.onnx
+
+# Datasets and captured photos
+cs2.v16i.yolov8/
+yolo_dataset/
+datasets/
+Data_Photo/
+Input_Photo/
+Labels/
+
+# Third-party Interception driver distribution (download from
+# https://github.com/oblitum/Interception/releases)
+Interception/

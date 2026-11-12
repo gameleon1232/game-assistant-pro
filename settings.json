@@ -1,0 +1,20 @@
+{
+    "screen_width": 1280,
+    "screen_height": 1024,
+    "trigger_key": "alt",
+    "click_key": "left",
+    "detection_radius": 1,
+    "color_tolerance": 2,
+    "click_duration": 0.1,
+    "aim_speed": 100.0,
+    "aim_accuracy_radius": 10,
+    "aim_key": "alt",
+    "aim_target": "CT_Head",
+    "output_mode": "virtual",
+    "hardware_port": "",
+    "hardware_baud": 115200,
+    "target_body_part": "head",
+    "team_to_detect": "both",
+    "model_path": "models/",
+    "theme": "dark"
+}
