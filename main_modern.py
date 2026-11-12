@@ -354,7 +354,7 @@ class ModernGameAssistant:
         # Команда для обнаружения
         ttk.Label(settings_grid, text="👥 Команда для обнаружения:", font=('Segoe UI', 11, 'bold')).grid(row=7, column=0, padx=10, pady=10, sticky='w')
         self.team_var = tk.StringVar(value='both')
-        team_combo = ttk.Combobox(settings_grid, textvariable=self.team_var, values=['ct', 't', 'both'], width=15, state='readonly')
+        team_combo = ttk.Combobox(settings_grid, textvariable=self.team_var, values=['enemy', 'friendly', 'both'], width=15, state='readonly')
         team_combo.grid(row=7, column=1, padx=10, pady=10, sticky='w')
         
         # Тема интерфейса
